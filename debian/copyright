@@ -1,0 +1,38 @@
+This package was debianized by Marcin Owsiany <porridge@debian.org> on
+Fri, 28 May 2004 15:37:17 +0200
+
+This package is not part of Debian GNU/Linux because it depends on non-free
+dictionary files distributed by Young Digital Planet to be useful.
+
+It was downloaded from http://toxygen.net/ydpdict/
+
+Copyright and author information:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ydpdict:
+    Copyright 1998-2007 Wojtek Kaniewski <wojtekka@toxygen.net>
+  debian packaging:
+    Copyright 2004-2007 Marcin Owsiany <porridge@debian.org>
+  adpcm.c and adpcm.h:
+   Copyright (C) 1999 Stanley J. Brooks <stabro@megsinet.net>
+
+License information:
+~~~~~~~~~~~~~~~~~~~~
+
+  ydpdict jest wydany na licencji GPL w wersji 2 (treść w języku angielskim
+  dostępna w pliku COPYING). Wszelkie poprawki wysłane do autora na licencji
+  innej niż GPL w wersji 2 zostaną odrzucone. Brak informacji o licencji
+  będzie traktowany jak przyjęcie licencji kodu, który jest poprawiany.
+  Wyjątkiem są pliki adpcm.c i adpcm.h autorstwa Stanley'a J. Brooksa wydane
+  na licencji LGPL w wersji 2.
+ 
+Unofficial translation:
+  ydpdict is distributed under GPL version 2 license (English text is available
+  in the COPYING file). Any fixes sent to the author covered by a license other
+  than GPL version 2 will be rejected. No information about a license will be
+  treated as accepting the license of the code being fixed.
+  An exception are the files adpcm.c and adpcm.h by Stanley J. Brooks,
+  distributed under LGPL version 2 license.
+
+On Debian systems, see /usr/share/common-licenses/GPL-2 for the full GPL 2 license text.
+On Debian systems, see /usr/share/common-licenses/LGPL-2 for the full LGPL 2 license text.
+

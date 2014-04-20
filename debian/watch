@@ -1,0 +1,2 @@
+version=3
+http://toxygen.net/ydpdict/ydpdict-(\d[^[:space:]]*)\.(?:tar\.gz|tgz|tar\.bz2|tbz|tbz2)

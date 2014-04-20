@@ -1,0 +1,6 @@
+?package(ydpdict):needs="text" \
+  section="Applications/Text" \
+  title="YDPdict" \
+  command="/usr/bin/ydpdict" \
+  hints="Dictionaries" \
+  longtitle="Collins (EN-PL) and/or Langenscheidt (DE-PL) dictionary"

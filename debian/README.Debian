@@ -1,0 +1,8 @@
+ydpdict Debian package
+
+  Just as the original package, this is only an interface to the actual
+  dictionary files, which are distributed by Young Digital Planet. After you
+  obtain a licensed copy of the files, configure their location in
+  /etc/ydpdict.conf
+
+ -- Marcin Owsiany <porridge@debian.org>, Wed, 01 Aug 2007 12:07:10 +0100

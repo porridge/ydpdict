@@ -1,0 +1,107 @@
+ydpdict (1.0.1-1) experimental; urgency=low
+
+  * New upstream version
+  * Modernized the build system: dh 9 and dh-autoreconf
+
+ -- Marcin Owsiany <porridge@debian.org>  Sat, 18 Aug 2012 10:23:27 +0200
+
+ydpdict (1.0.0-2) unstable; urgency=medium
+
+  * Cherry-picking some upstream fixes for squeeze
+    - documentation updates
+    - license text update and copyright clarification
+    - copyright year updates
+    - a fix for severity=important segfault with newer libao library caused by
+      an uninitialized data structure field (closes: #591464)
+    - a fix for buggy sample file path computation (closes: #592067) - it is
+      severity normal, but I chose to include it because it is a trivial,
+      extremely low risk change
+  * Bumping Standards-Version to 3.9.1. Necessary changes were:
+    - clarify the non-freeness of the package in debian/copyright
+    - use the policy-suggested makefile snippet for handling noopt
+
+ -- Marcin Owsiany <porridge@debian.org>  Sat, 07 Aug 2010 17:33:10 +0100
+
+ydpdict (1.0.0-1) unstable; urgency=low
+
+  * New upstream version
+    - update to use the new libydpdict2 API
+    - some minor cmdline parsing fixes
+    - minor word wrapping fixe
+    - updated po files
+  * debian/control:
+    - updated the dependency on libydpdict-dev package to the new name
+    - bumped standards-version to 3.7.3
+    - moved the homepage from long description to its own header
+    - improved the short description to mention the german dictionaries as
+    well
+  * debian/README.Debian: fixed a typo
+  * debian/rules: changed invocation of distclean to happen only when Makefile
+    exists, instead of ignoring any errors
+  * debian/ydpdict.menu: improved longtitle to mention the german dictionaries
+    as well
+  * Moved the Polish manpage to pl directory, as recommended by man-db
+    maintainer
+
+ -- Marcin Owsiany <porridge@debian.org>  Sat, 15 Mar 2008 15:27:00 +0000
+
+ydpdict (0.99.2-2) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- Marcin Owsiany <porridge@debian.org>  Sat, 25 Aug 2007 15:56:19 +0100
+
+ydpdict (0.99.2-1) experimental; urgency=low
+
+  * New upstream version
+    - restores the case-ignoring behaviour when opening dictionary files
+
+ -- Marcin Owsiany <porridge@debian.org>  Mon, 20 Aug 2007 10:13:42 +0100
+
+ydpdict (0.99.1-1) experimental; urgency=low
+
+  * New upstream version
+    - uses external libydpdict
+    - supports UTF-8 (closes: #356627)
+    - the config file is in english (ASCII) (closes: #356633)
+    - can now play samples by itself (using libao)
+  * Changed dependacy on libncurses to libncursesw
+  * Added dependancy on libao
+  * Bumped Standards-Version to 3.7.2 (no changes needed)
+  * Bumped DH dep/compat to 5
+  * Added a watch file (closes: #377345)
+  * Moved from dh_movefiles to dh_install
+  * Got rid of the configuration example in docs subdir
+
+ -- Marcin Owsiany <porridge@debian.org>  Thu,  2 Aug 2007 13:40:14 +0100
+
+ydpdict (0.66-1) unstable; urgency=medium
+
+  * New upstream version
+    - fixes samples playing and cmdline dict selection bugs Closes: #345548
+      urgency=medium since they are quite important for some people
+
+ -- Marcin Owsiany <porridge@debian.org>  Tue,  3 Jan 2006 14:53:00 +0100
+
+ydpdict (0.65-1) unstable; urgency=low
+
+  * New upstream version
+    - adds support for pl/de de/pl dictionary files
+    - some fixes, including those for amd64 Closes: #341594, #338720, #338731
+    - adds support for .ogg files
+  * debian/control:
+    - adjusted description to de support
+    - added upstream homepage URL to the description
+  * debian/rules: fixed (unused --libexecdir path to configure)
+  * debian/ydpdict.conf.example: removed
+  * debain/ydpdict.examples: use ydpdict.conf.example
+  * ydpdict.conf.example: changed mnt to media
+
+ -- Marcin Owsiany <porridge@debian.org>  Sat,  3 Dec 2005 16:34:10 +0100
+
+ydpdict (0.63-1) unstable; urgency=low
+
+  * Initial Release. Closes: #251439
+
+ -- Marcin Owsiany <porridge@debian.org>  Mon, 31 May 2004 12:06:29 +0200
+

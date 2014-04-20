@@ -1,0 +1,26 @@
+Source: ydpdict
+Section: contrib/text
+Priority: optional
+Maintainer: Marcin Owsiany <porridge@debian.org>
+Standards-Version: 3.9.3
+Homepage: http://toxygen.net/ydpdict/
+Build-Depends:
+# debianization tools
+ debhelper (>= 9~), dh-autoreconf,
+# program dependencies
+ libncursesw5-dev, libydpdict2-dev (>= 1.0.0), libao-dev,
+# build tools
+ autoconf, automake1.11, pkg-config
+Build-Conflicts: autoconf2.13, automake1.4
+
+Package: ydpdict
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: interface for Collins and Langenscheidt dictionaries
+ This is an ncurses interface to the Collins English-Polish/Polish-English
+ and/or Langenscheidt German-Polish/Polish-German dictionaries distributed by
+ Young Digital Planet. It can also play the pronunciation samples if the CD is
+ available.
+ .
+ This package is only the interface, it does not contain the dictionary files
+ itself. To use it, you need a copy of a dictionary from YDP.
