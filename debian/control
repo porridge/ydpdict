@@ -12,6 +12,8 @@ Build-Depends:
 # build tools
  autoconf, automake, pkg-config
 Build-Conflicts: autoconf2.13, automake1.4
+Vcs-Browser: https://github.com/porridge/ydpdict
+Vcs-Git: https://github.com/porridge/ydpdict.git -b debian-master
 
 Package: ydpdict
 Architecture: any
