@@ -10,7 +10,7 @@ Build-Depends:
 # program dependencies
  libncursesw5-dev, libydpdict2-dev (>= 1.0.0), libao-dev,
 # build tools
- autoconf, automake1.11, pkg-config
+ autoconf, automake, pkg-config
 Build-Conflicts: autoconf2.13, automake1.4
 
 Package: ydpdict
