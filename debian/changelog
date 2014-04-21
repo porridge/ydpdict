@@ -1,3 +1,16 @@
+ydpdict (1.0.2+1.0.3-1) unstable; urgency=low
+
+  * New upstream version
+    - contains a fix for accessing words near the end of the dictionary
+      (closes: #697616)
+    - switched to the upstream git repository
+  * New branch names in gbp config.
+  * Use automake 1.14.
+  * Bump standards-version.
+  * Drop autoreconf override - fixed upstream.
+
+ -- Marcin Owsiany <porridge@debian.org>  Mon, 21 Apr 2014 21:27:40 +0200
+
 ydpdict (1.0.1-1) experimental; urgency=low
 
   * New upstream version
