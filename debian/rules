@@ -1,12 +1,6 @@
 #!/usr/bin/make -f
 
-# As recommended by "current Debian best practice" prescribed by autotools-dev,
-# we specify an explicit automake version:
-export AUTOMAKE=automake-1.14
-# We rely on debhelper's autoconf build system to set configure build/host
-# flags appropriately to help cross-compiling.
-
-# See what exactly is going on.
+# See what exactly is going on on buildds.
 export DH_VERBOSE=1
 
 %:

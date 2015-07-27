@@ -2,7 +2,7 @@ Source: ydpdict
 Section: contrib/text
 Priority: optional
 Maintainer: Marcin Owsiany <porridge@debian.org>
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://toxygen.net/ydpdict/
 Build-Depends:
 # debianization tools

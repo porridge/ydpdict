@@ -1,3 +1,15 @@
+ydpdict (1.0.2+1.0.3-2) unstable; urgency=medium
+
+  * Added Vcs-* fields
+  * Dropped the versioned AUTOMAKE usage, since this package is pretty well
+    behaved regarding its automake use, and having to bump the version every
+    time automake changes version is just a waste of time. This is consistent
+    with the recommendation in autotools-dev. This makes it build with automake
+    1.15 (Closes: #793302)
+  * Bump standards-version (no changes needed).
+
+ -- Marcin Owsiany <porridge@debian.org>  Mon, 27 Jul 2015 22:29:11 +0200
+
 ydpdict (1.0.2+1.0.3-1) unstable; urgency=low
 
   * New upstream version
