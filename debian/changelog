@@ -1,3 +1,10 @@
+ydpdict (1.0.3-1) sid; urgency=medium
+
+  * New upstream version
+    - contains a fix for building with GCC 10 (Closes: #966171)
+
+ -- Marcin Owsiany <porridge@debian.org>  Sun, 09 Aug 2020 16:56:03 +0200
+
 ydpdict (1.0.2+1.0.3-2) unstable; urgency=medium
 
   * Added Vcs-* fields
