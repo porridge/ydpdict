@@ -32,6 +32,13 @@
  *
  */
 
+/*
+ * 2020-08-05: Changed inline to static inline functions to fix build with
+ * recent GCC versions.
+ *
+ * 2020-08-08: Removed unused variables.
+ */
+
 #include <sys/types.h>
 #include <math.h>
 #include <stdio.h>
@@ -78,7 +85,7 @@ const short iCoef[7][2] = {
                         { 392,-232}
 };
 
-inline st_sample_t AdpcmDecode(st_sample_t c, MsState_t *state,
+static inline st_sample_t AdpcmDecode(st_sample_t c, MsState_t *state,
                                st_sample_t sample1, st_sample_t sample2)
 {
         st_sample_t vlin;
@@ -186,7 +193,7 @@ static int AdpcmMashS(
         const SAMPL *ip, *itop;
         unsigned char *op;
         int ox = 0;      /*  */
-        int i, d, v0, v1, step;
+        int d, v0, v1, step;
         double d2;       /* long long is okay also, speed abt the same */
 
         ip = ibuff + ch;       /* point ip to 1st input sample for this channel */
@@ -212,7 +219,7 @@ static int AdpcmMashS(
                 op = obuff+7*chans;  /* point to base of output nibbles */
                 ox = 4*ch;
         }
-        for (i = 0; ip < itop; ip+=chans) {
+        for (; ip < itop; ip+=chans) {
                 int vlin,d,dp,c;
 
           /* make linear prediction for next sample */
@@ -309,7 +316,7 @@ static long ReAvgDelta(int ch, int chans, const SAMPL *ibuff, int n, int step)
 
 #endif
 
-inline void AdpcmMashChannel(
+static inline void AdpcmMashChannel(
         int ch,             /* channel number to encode, REQUIRE 0 <= ch < chans  */
         int chans,          /* total channels */
         const SAMPL *ip,    /* ip[] is interleaved input samples */
@@ -321,7 +328,7 @@ inline void AdpcmMashChannel(
 {
         SAMPL v[2];
         int n0,s0,s1,ss,smin;
-        int d,dmin,k,kmin;
+        int dmin,k,kmin;
 
         n0 = n/2; if (n0>32) n0=32;
 #if 0
@@ -363,9 +370,9 @@ inline void AdpcmMashChannel(
         *st = smin;
 #ifdef DEBUG
         fprintf(stderr,"kmin %d, smin %5d, ",kmin,smin);
-        d=AdpcmMashS(ch, chans, v, iCoef[kmin], ip, n, st, obuff, 1);
+        AdpcmMashS(ch, chans, v, iCoef[kmin], ip, n, st, obuff, 1);
 #else
-        d=AdpcmMashS(ch, chans, v, iCoef[kmin], ip, n, st, obuff, 0);
+        AdpcmMashS(ch, chans, v, iCoef[kmin], ip, n, st, obuff, 0);
 #endif
         obuff[ch] = kmin;
 }

@@ -1,6 +1,6 @@
 /*
  *  ydpdict
- *  (C) Copyright 1998-2007 Wojtek Kaniewski <wojtekka@toxygen.net>
+ *  (C) Copyright 1998-2020 Wojtek Kaniewski <wojtekka@toxygen.net>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -53,6 +53,7 @@ char *config_path = NULL;
 char *config_cdpath = NULL;
 char *config_player = NULL;
 char *config_word = NULL;
+char *config_audio = NULL;
 int config_dict = 0;
 int config_color = 1;
 int config_transparent = 0;
